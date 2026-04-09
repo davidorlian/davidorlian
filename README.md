@@ -1,48 +1,70 @@
 # David Orlian
 
-I'm drawn to the layer where hardware meets software — where understanding both sides is what actually solves the problem.
+Electrical & Electronics Engineering student (VLSI & Digital Systems)  
+Focused on **RTL design, FPGA, and embedded systems close to hardware**
 
-From RTL and synthesis to verified hardware, and from bare-metal firmware to a web UI running on the chip itself. I like knowing what's happening at every level of the stack.
-
-Most of my work lives close to the metal — digital design, embedded systems, RF communication, HW/SW integration. I don't just write code; I debug the interaction between layers.
-
----
-
-## Stack
-
-| Domain | Tools & Languages |
-|---|---|
-| HDL / RTL | Verilog, VHDL |
-| Simulation & Synthesis | ModelSim, Vivado (Artix-7) |
-| Embedded | C/C++, ESP32, Arduino, PlatformIO |
-| Protocols | I²C, UART, RF (433MHz, HC-12) |
-| General | Python, Git, Linux/UNIX |
-| Web (Embedded) | HTML/CSS/JS, AsyncWebServer |
+I build systems that combine:
+- Digital logic (Verilog/VHDL)
+- Embedded firmware (ESP32 / MCU)
+- Real hardware integration (RF, sensors, power)
 
 ---
 
-## Projects
+## 🔥 Selected Projects
 
-### 🔷 Digital Design & FPGA
+### 🧠 DES in Verilog  
+Full hardware implementation of the DES encryption algorithm  
+- 16-round Feistel network, key schedule, permutations  
+- Self-checking testbench with automated verification (ModelSim + Python)  
+- Focus: RTL design, verification flow, debugging at signal level  
 
-**[DES-verilog](https://github.com/davidorlian/DES-verilog)**  
-Full hardware implementation of DES encryption in Verilog — pipelined architecture, complete testbenches, and synthesis results on Artix-7.
-
-**[HDL_Projects](https://github.com/davidorlian/HDL_Projects)**  
-Collection of Verilog & VHDL modules with testbenches, documentation, and synthesis scripts.
+👉 https://github.com/davidorlian/DES-verilog
 
 ---
 
-### 🔶 Embedded Systems & IoT
+### ⏱️ Smart Shabbat Clock (ESP32 + RF + Web UI)  
+End-to-end embedded system controlling remote electrical devices  
+- ESP32 web server + real-time scheduling + RTC/NTP sync  
+- RF communication with remote switch unit  
+- Full system design: firmware, communication, UI, and hardware integration  
 
-**[smart-shabbat-clock](https://github.com/davidorlian/smart-shabbat-clock)**  
-ESP32-based Shabbat timer with RTC/NTP timekeeping, weekly scheduling, web UI, and RF control of remote switch units.
+👉 https://github.com/davidorlian/smart-shabbat-clock
 
-**[smart-shabbat-switch](https://github.com/davidorlian/smart-shabbat-switch)**  
-Remote switch unit (HC-12) with Sabbath bypass logic and mains-rated switching stage — designed to be controlled by the clock above.
+---
 
-**[rf-shabbat-timer](https://github.com/davidorlian/rf-shabbat-timer)**  
-ESP32-C3 RF timer with AsyncWebServer-based web UI, RTC scheduling, and logical ON/OFF state tracking over toggle-type RF devices.
+### 🔌 Smart Shabbat Switch  
+Remote AC-controlled switching unit  
+- ATmega328P-based system  
+- RF-controlled + AC sensing (opto-isolation)  
+- Silent SSR switching  
 
-**[oref-relay-esp32](https://github.com/davidorlian/oref-relay-esp32)**  
-ESP32 relay controller triggered by Israeli Home Front Command (Oref) alerts — with local web configuration UI and heap-optimized firmware.
+👉 https://github.com/davidorlian/smart-shabbat-switch
+
+---
+
+### 🧩 HDL Projects  
+Collection of Verilog/VHDL modules with testbenches and synthesis scripts  
+- Focus on reusable digital components and simulation  
+
+👉 https://github.com/davidorlian/HDL_Projects
+
+---
+
+## 🛠️ Skills
+
+**Hardware / RTL**  
+Verilog, VHDL, Digital Design, FPGA (Basys3)
+
+**Embedded Systems**  
+ESP32, Arduino, MCU development, hardware interfacing
+
+**Tools**  
+ModelSim, Vivado, Git, Python (automation & test generation)
+
+---
+
+## 📫 Contact
+Open to opportunities in:
+- RTL / FPGA
+- Embedded systems
+- Low-level HW/SW integration
