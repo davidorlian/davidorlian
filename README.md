@@ -1,70 +1,79 @@
 # David Orlian
 
-Electrical & Electronics Engineering student (VLSI & Digital Systems)  
-Focused on **RTL design, FPGA, and embedded systems close to hardware**
-
-I build systems that combine:
-- Digital logic (Verilog/VHDL)
-- Embedded firmware (ESP32 / MCU)
-- Real hardware integration (RF, sensors, power)
+Electrical & Electronics Engineering graduate-track developer working on hardware-oriented systems, from RTL and FPGA-oriented digital design to embedded firmware and software tools for real-world hardware integration.
 
 ---
 
-## 🔥 Selected Projects
+## Main Projects
 
-### 🧠 DES in Verilog  
-Full hardware implementation of the DES encryption algorithm  
-- 16-round Feistel network, key schedule, permutations  
-- Self-checking testbench with automated verification (ModelSim + Python)  
-- Focus: RTL design, verification flow, debugging at signal level  
+### [DES in Verilog](https://github.com/davidorlian/DES-verilog)
 
-👉 https://github.com/davidorlian/DES-verilog
+A complete DES encryption core implemented in Verilog, following the standard 16-round Feistel architecture.  
+The repository includes modular RTL for the datapath and key schedule, self-checking testbenches, Python-generated reference vectors, ModelSim simulation scripts, and FPGA synthesis / timing results for an Artix-7 target.
 
 ---
 
-### ⏱️ Smart Shabbat Clock (ESP32 + RF + Web UI)  
-End-to-end embedded system controlling remote electrical devices  
-- ESP32 web server + real-time scheduling + RTC/NTP sync  
-- RF communication with remote switch unit  
-- Full system design: firmware, communication, UI, and hardware integration  
+### Smart Shabbat System
 
-👉 https://github.com/davidorlian/smart-shabbat-clock
+A hardware/software system for scheduled Shabbat-mode load control, built around a central ESP32 controller and a remote ATmega328P switch unit.
 
----
+#### [Central controller — smart-shabbat-clock](https://github.com/davidorlian/smart-shabbat-clock)
 
-### 🔌 Smart Shabbat Switch  
-Remote AC-controlled switching unit  
-- ATmega328P-based system  
-- RF-controlled + AC sensing (opto-isolation)  
-- Silent SSR switching  
+ESP32-based scheduling controller with RTC/NTP timekeeping, local Web UI, LCD status display, persistent weekly scheduling, and HC-12 RF communication to remote switch units.
 
-👉 https://github.com/davidorlian/smart-shabbat-switch
+#### [Remote switch unit — smart-shabbat-switch](https://github.com/davidorlian/smart-shabbat-switch)
+
+Companion remote switch unit based on ATmega328P / Arduino AVR firmware.  
+The unit receives HC-12 RF commands, senses the AC/load state through opto-isolated detection, and controls the local load through relay-based switching logic.
 
 ---
 
-### 🧩 HDL Projects  
-Collection of Verilog/VHDL modules with testbenches and synthesis scripts  
-- Focus on reusable digital components and simulation  
+### [Smart Geiger OCR Monitor](https://github.com/davidorlian/smart-geiger-ocr-monitor)
 
-👉 https://github.com/davidorlian/HDL_Projects
-
----
-
-## 🛠️ Skills
-
-**Hardware / RTL**  
-Verilog, VHDL, Digital Design, FPGA (Basys3)
-
-**Embedded Systems**  
-ESP32, Arduino, MCU development, hardware interfacing
-
-**Tools**  
-ModelSim, Vivado, Git, Python (automation & test generation)
+A Python-based camera OCR monitor for reading a handheld Geiger counter LCD without modifying the meter hardware.  
+The system uses one-time ROI calibration, a 7-segment-oriented OCR pipeline, Tesseract fallback, threshold monitoring, measurement logging, and separate PC/Raspberry Pi operating modes.
 
 ---
 
-## 📫 Contact
-Open to opportunities in:
-- RTL / FPGA
-- Embedded systems
-- Low-level HW/SW integration
+### [Oref Relay ESP32](https://github.com/davidorlian/oref-relay-esp32)
+
+An ESP32-based relay controller that polls Home Front Command alert feeds over HTTPS, parses JSON alert data, matches alerts against a configured area, and drives a relay according to alert categories.  
+The firmware includes local Web UI configuration, persistent settings with ESP32 Preferences, setup-AP fallback, LED status indication, and relay output control.
+
+---
+
+## Additional HDL Work
+
+### [HDL Projects](https://github.com/davidorlian/HDL_Projects)
+
+Smaller Verilog and VHDL building blocks and testbenches covering combinational logic, sequential logic, counters, registers, UART-related modules, and other RTL practice work.
+
+---
+
+## Prototype / Experimental Work
+
+### [RF Shabbat Timer Prototype](https://github.com/davidorlian/rf-shabbat-timer)
+
+Earlier ESP32-C3 prototype exploring RTC scheduling, local Web UI control, and RF transmission to a toggle-based receiver with no direct state feedback.
+
+---
+
+## Technical Stack
+
+### Hardware / RTL
+
+Verilog, VHDL, digital design, FPGA-oriented development, ModelSim, Vivado
+
+### Embedded
+
+ESP32, ATmega328P / AVR, Arduino framework, RTC modules, RF modules, relays, sensors, LCDs
+
+### Software / Tooling
+
+Python, OpenCV, Tesseract OCR, Git, JSON parsing, local web interfaces, test automation
+
+---
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/david-orlian)
